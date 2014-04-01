@@ -24,7 +24,7 @@ def write_influx(name,value,time):
     }])
 
 def whisper_read(whisper_file):
-  (timeInfo, values) = whisper.fetch(whisper_file,from_,now)
+  (timeInfo, values) = whisper.fetch(whisper_file,0,now)
   return timeInfo,values
 
 def search(pwd):
