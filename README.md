@@ -7,6 +7,8 @@ the script is currently in a early proof of concept version and might be using b
 
 the performance is currently not mindblowing.
 
+
+
 usage: whisper-to-influxdb.py [-h] [-host host] [-port port] [-user user]
                               [-password password] [-db db]
                               path
