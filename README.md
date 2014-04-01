@@ -37,3 +37,5 @@ value: eth0_rx
 timeseries: tracker-001
 value: rabbit_queue
 ```
+
+![alt text](https://github.com/damaex17/whisper-to-influxDB/blob/master/readme.png)
