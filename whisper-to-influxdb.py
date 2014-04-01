@@ -64,7 +64,8 @@ def main():
     for key in data.iterkeys():
       time = float(key)
       value = whisper_file.split('/')[-1].split('.')[0]
-      time_series = whisper_file.split('/')[-2].split('/')[-1]
+      time_series = whisper_file.replace('//','/').split('/')[-2].split('/')[-1]
+      #print time_series, value, time, data[key]
       #time_info, values =  whisper_read(whisper_file)
       client.write_points(
         [{
