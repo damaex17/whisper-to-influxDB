@@ -15,17 +15,17 @@ DEFAULT_DB="whisper"
 
 now = int(time.time())
 
-def write_influx(name,value,time):
-  client.write_points()(
-    [{
-    "name":name,
-    "columns":["time", "value"],
-    "points":[[time,value]]
-    }])
-
-def whisper_read(whisper_file):
-  (timeInfo, values) = whisper.fetch(whisper_file,0,now)
-  return timeInfo,values
+#def write_influx(name,value,time):
+#  client.write_points()(
+#    [{
+#    "name":name,
+#    "columns":["time", "value"],
+#    "points":[[time,value]]
+#    }])
+#
+#def whisper_read(whisper_file):
+#  (timeInfo, values) = whisper.fetch(whisper_file,0,now)
+#  return timeInfo,values
 
 def search(pwd):
   whisper_files = []
@@ -55,7 +55,6 @@ def main():
   parser.add_argument('-password', default=DEFAULT_PASSWORD, metavar="password", help="influxDB password")
   parser.add_argument('-db', default=DEFAULT_DB, metavar="db", help="influxDB db!")
   args = parser.parse_args()
-  #print args.host, args.port, args.user, args.password, args.db
   client = InfluxDBClient(args.host, args.port, args.user, args.password, args.db)
   try: client.create_database(args.db)
   except: pass
