@@ -2,7 +2,9 @@ whisper-to-influxDB
 ===================
 
 whisper-to-influxDB is a script which reads whisper files and creates datapoints in influxDB.
+
 the script is currently in a early proof of concept version and might be using bulk commits or threading in the future.
+
 the performance is currently not mindblowing.
 
 usage: whisper-to-influxdb.py [-h] [-host host] [-port port] [-user user]
