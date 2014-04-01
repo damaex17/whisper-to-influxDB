@@ -3,8 +3,8 @@ whisper-to-influxDB
 
 ### script searches whisper files reads them and creates datapoints in influxDB.
 
-the script is currently in a early proof of concept version and might be using bulk commits or threading in the future.
-the performance is __not mindblowing__ ath the moment.
+the script is a early proof of concept and might be using bulk commits or threading in the future.
+the performance is __not mindblowing__ at the moment.
 
 
 ```bash
