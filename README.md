@@ -1,17 +1,18 @@
-# whisper-to-influxDB
-# ===================
+whisper-to-influxDB
+===================
 
-whisper-to-influxDB is a script which reads whisper files and creates datapoints in influxDB.
+## whisper-to-influxDB is a script which reads whisper files and creates datapoints in influxDB.
 
 the script is currently in a early proof of concept version and might be using bulk commits or threading in the future.
 
-the performance is currently not mindblowing.
+the performance is currently __not mindblowing__.
 
 
-
+```bash
 usage: whisper-to-influxdb.py [-h] [-host host] [-port port] [-user user]
                               [-password password] [-db db]
                               path
+```
                               
 the script will parse the given path recursively and search for whisper files.
 the found whisper files are being read and None values are omitted.
