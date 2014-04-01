@@ -1,5 +1,5 @@
-whisper-to-influxDB
-===================
+# whisper-to-influxDB
+# ===================
 
 whisper-to-influxDB is a script which reads whisper files and creates datapoints in influxDB.
 
