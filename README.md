@@ -38,4 +38,4 @@ timeseries: tracker-001
 value: rabbit_queue
 ```
 
-![alt text](http://i.imgur.com/jJnmERu.png)
+
