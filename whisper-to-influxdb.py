@@ -46,6 +46,15 @@ def lame_whisper_read(whisper_file):
       data[time] = value
   return data
 
+def get_path_list(path):
+  path_list = []
+  path = os.path.split(path)
+  while path[1] is not "":
+    path_list.insert(0, path[1])
+    path = os.path.split(path[0])
+  return path_list
+
+
 def main():
   parser = argparse.ArgumentParser(description='whisper file to influxDB migration script')
   parser.add_argument('path', help='path to whispers')
@@ -61,7 +70,7 @@ def main():
   for whisper_file in  search(args.path):
     data = lame_whisper_read(whisper_file) 
     value = whisper_file.split('/')[-1].split('.')[0]
-    time_series = whisper_file.replace('//','/').split('/')[-2].split('/')[-1]
+    time_series = '.'.join(get_path_list(whisper_file)[:-1])
     for key in data.iterkeys():
       time = float(key)
       #value = whisper_file.split('/')[-1].split('.')[0]
